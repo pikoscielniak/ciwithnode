@@ -1,2 +1,6 @@
 npm install --save express
 npm install --save jade
+npm install --save-dev bower
+bower init
+bower install jquery --save
+bower install angular --save
