@@ -11,5 +11,8 @@
     "url": "https://piotrekbass@bitbucket.org/piotrekbass/ciwithnode.git"
   },
   "author": "piotrekbass",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.0"
+  }
 }
