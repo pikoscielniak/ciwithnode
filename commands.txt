@@ -4,3 +4,4 @@ npm install --save-dev bower
 bower init
 bower install jquery --save
 bower install angular --save
+bower install --save bootstrap
