@@ -13,3 +13,6 @@ heroku ps:scale web=1
 
 git remote remove heroku
 $ heroku git:remote -a ciwithnode
+skrypt mongod
+chmod a+x mongod
+npm install mongoose --save
