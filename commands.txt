@@ -16,3 +16,10 @@ $ heroku git:remote -a ciwithnode
 skrypt mongod
 chmod a+x mongod
 npm install mongoose --save
+mongo
+show dbs
+use jobfinder
+show collections
+db.jobs.find()
+
+bower install angular-resource --save
