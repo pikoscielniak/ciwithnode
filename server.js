@@ -18,7 +18,9 @@ app.get('*', function(req, res) {
     res.render('index');
 });
 
-mongoose.connect('mongodb://localhost/jobfinder');
+var dbCon = process.env.DB_CONNECTION || 'mongodb://localhost/jobfinder';
+
+mongoose.connect('');
 
 var con = mongoose.connection;
 con.once('open', function(err) {
