@@ -5,3 +5,11 @@ bower init
 bower install jquery --save
 bower install angular --save
 bower install --save bootstrap
+heroku --version
+heroku login
+heroku create
+git push heroku master
+heroku ps:scale web=1
+
+git remote remove heroku
+$ heroku git:remote -a ciwithnode
