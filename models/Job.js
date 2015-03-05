@@ -1,21 +1,19 @@
- var mongoose = require("mongoose");
+var mongoose = require("mongoose");
+var Promise = require("bluebird");
 
- var jobSchema = mongoose.Schema({
-  title: {
-   type: String
-  },
-  description: {
-   type: String
-  }
- });
+var jobSchema = mongoose.Schema({
+ title: {
+  type: String
+ },
+ description: {
+  type: String
+ }
+});
 
- var Job = mongoose.model('Job', jobSchema);
- exports.seedJobs = function(callback) {
+var Job = mongoose.model('Job', jobSchema);
+exports.seedJobs = function() {
+ return new Promise(function(resolve, reject) {
   Job.find({}).exec(function(err, collection) {
-   if (err) {
-    callback(err);
-    return;
-   }
    if (collection.length === 0) {
     Job.create({
      title: 'Cook',
@@ -32,9 +30,9 @@
     Job.create({
      title: 'Axe Maker',
      description: 'We need many axes made .. so many..'
-    }, callback);
-   } else {
-    callback();
+    }, resolve);
    }
   });
- };
+ })
+
+};

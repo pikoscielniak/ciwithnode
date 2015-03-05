@@ -27,3 +27,4 @@ npm install mocha -g
 mocha
 mocha -w
 npm install --save-dev chai
+npm install --save bluebird
