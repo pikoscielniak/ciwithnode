@@ -3,6 +3,7 @@ var jobModel = require("../models/Job");
 var mongoose = require('mongoose');
 var Promise = require("bluebird");
 var dbCon = 'mongodb://localhost/jobfinder';
+var jobsData = require("../jobsData");
 
 
 function resetJobs() {
@@ -11,21 +12,15 @@ function resetJobs() {
     });
 }
 
-function findJobs(query) {
-    return Promise.cast(mongoose.model('Job').find(query).exec());
-}
-
-var connectDb = Promise.promisify(mongoose.connect, mongoose);
-
 describe('get jobs', function() {
 
     var jobs;
 
     before(function(done) {
-        connectDb(dbCon)
+        jobsData.connectDb(dbCon)
             .then(resetJobs)
-            .then(jobModel.seedJobs)
-            .then(findJobs)
+            .then(jobsData.seedJobs)
+            .then(jobsData.findJobs)
             .then(function(collection) {
                 jobs = collection;
                 done();
