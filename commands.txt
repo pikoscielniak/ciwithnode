@@ -15,6 +15,7 @@ git remote remove heroku
 $ heroku git:remote -a ciwithnode
 skrypt mongod
 chmod a+x mongod
+./mongod
 npm install mongoose --save
 mongo
 show dbs
