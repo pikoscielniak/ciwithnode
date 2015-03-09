@@ -9,4 +9,4 @@ var jobSchema = mongoose.Schema({
  }
 });
 
-mongoose.model('Job', jobSchema);
+module.exports = mongoose.model('Job', jobSchema);

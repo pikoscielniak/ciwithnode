@@ -32,3 +32,6 @@ npm install --save bluebird
 
 git remote add origin https://github.com/piotrekbass/ciwithnode.git
 codeship.io
+
+npm install supertest --save-dev
+npm install body-parser --save
