@@ -29,3 +29,6 @@ mocha
 mocha -w
 npm install --save-dev chai
 npm install --save bluebird
+
+git remote add origin https://github.com/piotrekbass/ciwithnode.git
+codeship.io

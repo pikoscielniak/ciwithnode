@@ -8,4 +8,5 @@ var jobSchema = mongoose.Schema({
   type: String
  }
 });
+
 mongoose.model('Job', jobSchema);
