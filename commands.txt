@@ -35,3 +35,7 @@ codeship.io
 
 npm install supertest --save-dev
 npm install body-parser --save
+npm install karma --save-dev
+npm install karma-mocha karma-chai --save-dev
+npm install karma-cli -g
+bower install angular-mocks --save-dev
