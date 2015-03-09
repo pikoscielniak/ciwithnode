@@ -39,3 +39,4 @@ npm install karma --save-dev
 npm install karma-mocha karma-chai --save-dev
 npm install karma-cli -g
 bower install angular-mocks --save-dev
+npm install phantomjs karma-phantomjs-launcher --save-dev
