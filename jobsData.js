@@ -8,11 +8,15 @@ function findJobs (query) {
     return Promise.cast(Job.find(query).exec());
 }
 
+var createJob = Promise.promisify(Job.create, Job);
+
 exports.findJobs = findJobs;
 
 exports.connectDb = Promise.promisify(mongoose.connect, mongoose);
 
-var createJob = Promise.promisify(Job.create, Job);
+exports.saveJob = createJob;
+
+
 
 var jobs = [{
  title: 'Cook',
